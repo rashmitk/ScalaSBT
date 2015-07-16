@@ -1,1 +1,1 @@
-A Scala project build using SBT which includes integration with GatLing, Sonar-runner, Jacoco, SCoverage etc with Jenkins
+This is a POC of building Scala project using SBT and integrating it with GatLing, Sonar-runner, Jacoco, SCoverage etc with Jenkins
