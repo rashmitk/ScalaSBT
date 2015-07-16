@@ -1,0 +1,1 @@
+This project is a POC to build using SBT and integration of GatLing, Sonar-runner, Jacoco, SCoverage etc with Jenkins
