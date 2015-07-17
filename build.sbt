@@ -17,12 +17,12 @@ libraryDependencies ++=
 			"io.gatling.highcharts" % "gatling-charts-highcharts" % "2.1.6" % "test",
 			"io.gatling"            % "gatling-test-framework"    % "2.1.6" % "test",
 			"org.scalatest" % "scalatest_2.11" % "2.2.4" % "test",
-			"mysql" % "mysql-connector-java" % "5.1.22" % "flyway"
+			"mysql" % "mysql-connector-java" % "5.1.22"
 			)
-    
-flywayOptions := Map("driver" -> "com.mysql.jdbc.Driver",
-                     "url" -> "jdbc:mysql://localhost:3306/test",
-                     "user" -> "root", 
-                     "password" -> "admin") 
+
+flywayUrl := "jdbc:mysql://localhost:3306/myflyway"
+
+flywayUser := "root" 
+flywayPassword := "admin"
                      
 publishTo := Some(Resolver.file("file",  new File(Path.userHome.absolutePath+"/.m2/repository")))
