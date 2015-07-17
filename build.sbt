@@ -1,3 +1,17 @@
+//List of plugins integrated
+//IDE Plugin : subeclipse
+//Test Dependency : Scalatest for Scala, JUnit for Java 
+//Static Code Analysis Plugin : ScalaStyle, Scapegoat
+//Code Coverage Plugin : Jacoco, SCoverage
+//Automation Test Plugin : Gatling
+//DB Migration Plugin : Flyway
+
+
+//Integration not supported in Jenkins due to plug-in non-availability
+//Scapegoat
+//ScalaStyle
+
+
 organization := "com.cybage.scala.sbt"
 version := "0.1.0"
 scalaVersion := "2.11.6"
