@@ -31,6 +31,7 @@ libraryDependencies ++=
 			"io.gatling.highcharts" % "gatling-charts-highcharts" % "2.1.6" % "test",
 			"io.gatling"            % "gatling-test-framework"    % "2.1.6" % "test",
 			"org.scalatest" % "scalatest_2.11" % "2.2.4" % "test",
+			"org.seleniumhq.selenium" % "selenium-java" % "2.25.0" % "test",
 			"mysql" % "mysql-connector-java" % "5.1.22"
 			)
 
