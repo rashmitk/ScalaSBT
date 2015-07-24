@@ -1,17 +1,3 @@
-//List of plugins integrated
-//IDE Plugin : subeclipse
-//Test Dependency : Scalatest for Scala, JUnit for Java 
-//Static Code Analysis Plugin : ScalaStyle, Scapegoat
-//Code Coverage Plugin : Jacoco, SCoverage
-//Automation Test Plugin : Gatling
-//DB Migration Plugin : Flyway
-
-
-//Integration not supported in Jenkins due to plug-in non-availability
-//Scapegoat
-//ScalaStyle
-
-
 organization := "com.cybage.scala.sbt"
 version := "0.1.0"
 scalaVersion := "2.11.6"
@@ -24,7 +10,9 @@ seq(sonar.settings :_*)
 seq(flywaySettings:_*)
 
 enablePlugins(GatlingPlugin)
+enablePlugins(plugins.JUnitXmlReportPlugin)
 
+//Dependency jars 
 libraryDependencies ++= 
 		Seq("junit" % "junit" % "4.10",
 			"org.codehaus.sonar.runner" % "sonar-runner-dist" % "2.3",
@@ -32,7 +20,8 @@ libraryDependencies ++=
 			"io.gatling"            % "gatling-test-framework"    % "2.1.6" % "test",
 			"org.scalatest" % "scalatest_2.11" % "2.2.4" % "test",
 			"org.seleniumhq.selenium" % "selenium-java" % "2.25.0" % "test",
-			"mysql" % "mysql-connector-java" % "5.1.22"
+			"mysql" % "mysql-connector-java" % "5.1.22",
+			"com.novocode" % "junit-interface" % "0.11" % Test
 			)
 
 flywayUrl := "jdbc:mysql://localhost:3306/myflyway"
